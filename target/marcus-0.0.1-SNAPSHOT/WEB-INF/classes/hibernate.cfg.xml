@@ -13,7 +13,7 @@
         <property name="show_sql">true</property>
         <property name="format_sql">true</property>
         <property name="hbm2ddl.auto">update </property>
-        <mapping resource="user.hbm.xml" />
-        <mapping class="main.Emloye" />
+         <mapping class="main.Entity.User" />
+        <mapping class="main.Entity.Emloye" />
     </session-factory>
 </hibernate-configuration>

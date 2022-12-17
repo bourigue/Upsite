@@ -3,21 +3,21 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package main;
+import main.Entity.User;
 import java.util.Date;
+import main.Service.registerServices;
  
-import org.hibernate.Session;
+
  
 public class Test {
     public static void main(String[] args) {
-        Session session = HibernateUtil.getSessionFactory().openSession();
-        session.beginTransaction();
+        registerServices registerServices = new registerServices();                                                                            
         User user = new User();
-        user.setUserId(7);
+        user.setId(0L);
         user.setUsername("Mukesh");
         user.setCreatedBy("Google");
         user.setCreatedDate(new Date());
-        session.save(user);
-        session.getTransaction().commit();
+        registerServices.addUser(user);
     }
  
 }
